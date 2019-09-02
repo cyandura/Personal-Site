@@ -1,0 +1,417 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto' , sans-serif; 
+    --var-color: rgb(100, 0, 255);
+  }
+
+body{
+  overflow-x: hidden;
+  height: 100%;}
+
+h1{font-weight: 400}
+h2{font-weight: 500}
+h2{font-size: 35px;}
+h3{font-size: 28px;}
+h4{font-size: 24px;}
+/*Header*/
+
+.header{
+  text-align: center;
+  width: 100vw;
+  height: 400px;
+  
+}
+
+header{
+  
+  width: 100vw;
+  background-image: url("../images/codecrop.jpeg");
+  background-attachment: fixed;
+  background-size: 100vw 330px;
+  
+  margin: 0;
+  height: 340px;
+}
+
+.gradient{
+  width: 100vw;
+  display: flex;
+  height: 340px;
+  margin: 0;
+  background: linear-gradient(to top, #000 5%, rgba(255, 255, 255, 0));
+}
+
+.pic{
+  position: absolute;
+  left: 0.5%;
+  padding: 0.5%;
+  
+}
+
+.title{
+  position: relative;
+  color: var(--var-color);
+  width: 100%;
+  letter-spacing: 3px;
+  background: radial-gradient( #000,  transparent 60% );
+}
+
+.title h1{
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 90px;
+  letter-spacing: 20px;
+  animation: moveInLeft .8s ease-out .4s;
+  animation-fill-mode: backwards;
+}
+.title p{
+  animation: moveInBottom .5s ease-out 1s;
+  animation-fill-mode: backwards;
+
+}
+
+.main-heading{
+  padding: 3% 0;
+}
+.main-heading p{
+  margin: 0 22%; /*for making the subheading text not overlap anything*/
+}
+
+.topnav-main{
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  background: linear-gradient(to bottom, #000 30%, rgba(255, 255, 255, 0));
+  top: 0;
+}
+
+.topnav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  background: #eee;
+  top: 0;
+  
+}
+
+.topnav a,
+.topnav-main a{
+  width: max-content;
+  height: fit-content;
+  text-align: center;
+  background: #ccc;
+  text-decoration: none;
+  padding: 0 1%;
+  margin: 0 2%;
+  border-radius: 5px;
+  font-size: 27px;
+  transform: scale(1);
+  transition: transform .5s;
+}
+.topnav-main{
+  margin-bottom: 200px;
+}
+a:link,
+a:visited{
+  color: var(--var-color)
+}
+
+.topnav a:hover,
+.topnav-main a:hover{
+  transform: scale(1.4);
+  transition: transform 0.5s;
+  background-color: var(--var-color);
+  color: #F2F2F2;
+  z-index: 1;
+}
+
+.topnav .active{
+  background-color: var(--var-color);
+  color: #F2F2F2;
+}
+
+/*Attempt at parallax scrolling*/
+.parallax{
+  background-image: url("../images/longcode.jpg");
+  background-attachment: fixed;
+  background-repeat: repeat-x;
+  background-size: cover;
+  position: absolute; 
+  top: 940px;
+  bottom: 0;
+  z-index: -1;
+  height: 500%;
+  width: 95.2%;
+
+  /*Parallax Magic*/
+  transform: translateZ(-1px) scale(1.3);
+
+}
+
+/*Main Content*/
+.content {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.leftcolumn {
+  float: left;
+  width: 73%;
+  margin-top: 0;
+  background: transparent;
+}
+
+
+
+.rightcolumn{
+  float: right;
+  width: 27%;
+  
+  background-color: transparent;
+  margin-top: 0;
+}
+.rightcolumn p{
+  font-size: 20px;
+}
+
+.infopane{
+  background-color: #eee;
+  padding: 25px;
+  margin: 30px;
+}
+
+.content:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.rightcolumn p{
+  text-align: left;
+}
+
+
+
+.footer{
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+  background: #eee;
+}
+.footer p {
+  text-align: center;
+}
+
+p{
+  font-family: verdana;
+  font-size: 25px;
+}
+.social a{
+  display: block;
+  margin: 3% 3%;
+  font-size: 1.5em;
+}
+
+.quote{
+  background-color: #ddd;
+
+}
+
+
+/*ul linkpage*/
+ul.linkpage{
+  list-style-type: none;
+  background: #ddd;
+  width: 100%;
+  padding: 0 0 0 1%;
+}
+ul.linkpage li{
+  padding: 0 0 20px 0;
+}
+
+ul.linkpage a{
+  width: 29%;
+  text-align: left;
+  font-size: 31px;
+  padding: 1% 1%;
+  color: var(--var-color);
+}
+
+ul.linkpage li p{
+  margin: 0 0 0 3%;
+  text-align: left;
+  
+}
+/*li link page*/
+li{
+  text-align: center;
+}
+
+li a{
+  text-align: center;
+  display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 2px solid --var-color;
+}
+
+li a:hover,
+li a:active{
+  background-color: var(--var-color);
+  color: white;
+}
+
+/*ul projectpage*/
+ul.projectpage{
+  list-style-type: none;
+  
+}
+
+ul.projectpage li *{
+  text-align: left;
+  margin: 1% 0 3% 0;
+  width: 50%;
+}
+
+ul.projectpage li img{
+  float: right;
+  width: 300px;
+}
+
+/*Course Page*/
+article p{
+  text-align: left;
+}
+article * {
+  margin: 2% 0;
+}
+article {
+  margin: 0 0 0 1%;
+}
+/*experience page*/
+.hobbies{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.hobby{
+  margin: 2%;
+}
+/*phonebook page*/
+.login{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+fieldset{
+  padding: 0.5%;
+  margin: 2px;
+}
+input{
+  margin: 7px;
+}
+
+.loginform{
+  margin: 1% 0 0 0;
+}
+
+
+/*Media Queries*/
+@media screen and (max-width: 1300px){
+  .leftcolumn{
+    width: 100%;
+    display: block;
+  }
+
+  .rightcolumn{
+    float: none;
+    width: 100%;
+    display: block;
+  }
+
+  .pic{
+    transform: translateY(80px) translateX(-60px) scale(.45);
+  }
+  .topnav, .topnav-main{
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+  .parallax{
+    display: none;
+  }
+  
+}
+@media screen and (max-width: 1000px){
+  .topnav a{
+    width: 90%;
+    margin: 4px 0;
+  }
+  .topnav{
+    height: max-content;
+  }
+  .content{
+    margin-top: 240px;
+  }
+  .secureBlock{
+    margin-top: 240px;
+  }
+}
+@media screen and (max-width: 700px){
+  .title p{
+    font-size: 15px;
+  }
+  .title h1{
+    font-size: 60px;
+  }
+
+}
+
+/*Taken from Jonas Schmedtmann's Sass Course on Udemy*/
+@keyframes moveInLeft {
+  0%{
+      opacity: 0;
+      transform: translateX(-200px);
+  }
+  80%{transform: translateX(10px);}
+  100%{
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0%{
+      opacity: 0;
+      transform: translateX(200px);
+  }
+  80%{transform: translateX(-10px);}
+  100%{
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0%{
+      opacity: 0;
+      transform: translateY(300px);
+  }
+  100%{
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+
+      
+      
